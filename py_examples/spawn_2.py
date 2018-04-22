@@ -9,7 +9,7 @@ import threading
 import time
 
 def thread_func():
-        for i in xrange(1, 500000000):
+        for i in xrange(1, 50000000):
                 k = i * 3
 
 
