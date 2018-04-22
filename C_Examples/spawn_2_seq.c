@@ -1,5 +1,7 @@
 /**
- * Spawn_2.c : A program to spawn two cpu bound threads 
+ * Spawn_2_seq.c : A program to run two cpu bound functions
+ * sequentially
+ *
  * Daniel Zahka ~ daniel.zahka@wustl.edu
  * Anish Naik ~ anish,r.naik@wustl.edu
  *
@@ -21,13 +23,10 @@ void * thread_func(void * args){
 
 
 int main(){
-    pthread_t tid1, tid2;
     printf("Spawning Threads\n");
-    pthread_create(&tid1, 0, thread_func, 0); 
-    pthread_create(&tid2, 0, thread_func, 0);
-    pthread_join(tid1, 0);
-    pthread_join(tid2, 0); 
-    printf("Joined Threads\n");
+    thread_func(0);
+	thread_func(0);
+	printf("Joined Threads\n");
  
     return 0;
 }
