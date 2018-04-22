@@ -8,7 +8,7 @@ Anish Naik ~ anish.r.naik@wustl.edu
 import time
 
 def thread_func():
-        for i in range(1, 200000000):
+        for i in range(1, 20000000):
                 k = i * 3
 
 

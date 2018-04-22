@@ -14,9 +14,9 @@ path = "tempfifo"
 
 def read_fifo():
 	with open(path, 'r') as fifo:
-		print("Waiting for input...")
 		line = fifo.read()
 		print(line)
+		print("exiting function")
 	return
 
 def cpu_bound():
